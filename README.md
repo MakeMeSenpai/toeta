@@ -16,8 +16,7 @@ ___
 ### MVP TODO:
 - Setup 
     - [x] Name it
-    - [x] complete readme 
-    - [] setup node
+    - [x] complete readme
 - Creating firm ideas
     - [] Complete Research on recipes APIs
     - [] Create 5-7 Wire-frame for website design
