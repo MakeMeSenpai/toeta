@@ -1,11 +1,16 @@
 {
   "name": "toeta",
-  "version": "1.0.0",
+  "version": "1.5.0",
   "description": "What to eat today?",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "toeta",
+    "heroku"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MakeMeSenpai/toeta.git"
@@ -17,6 +22,5 @@
   },
   "engines": {
     "node": "15.x"
-  },
-  "homepage": "https://github.com/MakeMeSenpai/index.html"
+  }
 }
