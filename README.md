@@ -1,4 +1,4 @@
-# Toeta V.0.0.1 Alpha
+# Toeta V.1.0.0 Alpha
 For all the chefs new and old who are finding it hard to decide what to eat for dinner today, Toeta is the solution for you. Giving you daily recipes that you can cook!
 
 ## Index:
@@ -18,10 +18,10 @@ ___
     - [x] Name it
     - [x] complete readme
 - Creating firm ideas
-    - [] Complete Research on recipes APIs
-    - [] Create 5-7 Wire-frame for website design
+    - [x] Complete Research on recipes APIs
+    - [x] Create 5-7 Wire-frame for website design
     - [] make it live
-    - [] **IF NO API** create a database filled with recipes using SQL
+    - [x] ~~**IF NO API** create a database filled with recipes using SQL~~ 
 - Most valuable parts
     - [] Collect and return a recipe from the API/DB
     - [] Make the returned recipe random per day.

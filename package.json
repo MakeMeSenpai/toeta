@@ -1,0 +1,22 @@
+{
+  "name": "toeta",
+  "version": "1.0.0",
+  "description": "What to eat today?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MakeMeSenpai/toeta.git"
+  },
+  "author": "MakeMeSenpai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MakeMeSenpai/toeta/issues"
+  },
+  "engines": {
+    "node": "15.x"
+  },
+  "homepage": "https://github.com/MakeMeSenpai/index.html"
+}
