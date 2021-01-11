@@ -3,12 +3,16 @@ var env = $("#myPhpValue").val();
 let key = 'undefined'
 if (config.API_KEY) {
     key = config.API_KEY
+    console.log("config")
 } else {
     key = env
+    console.log("env")
 }
+console.log(key)
 
 // input
 const searched = document.getElementById("search")
+console.log(searched.value)
 
 // output
 const srcLink = document.getElementById("source-link")
