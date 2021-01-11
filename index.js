@@ -1,4 +1,11 @@
-const key = config.API_KEY
+// secret values config
+let key = "undefined"
+if (config) {
+    key = config.API_KEY
+} else {
+    const heroku = require('aws-sdk')
+    key = process.env.API_KEY
+}
 
 // input
 const searched = document.getElementById("search").value
