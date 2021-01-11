@@ -1,5 +1,11 @@
-// local key
-key = config.API_KEY
+// grabbing key
+var env = $("#myPhpValue").val();
+let key = 'undefined'
+if (config.API_KEY) {
+    key = config.API_KEY
+} else {
+    key = env
+}
 
 // input
 const searched = document.getElementById("search")
@@ -21,10 +27,6 @@ function getSource(id) {
 
 // onclick
 function getRec() {
-    if (typeof key === 'undefined') {
-        const heroku = require('aws-sdk')
-        key = process.env.API_KEY
-    }
     $.ajax({
         // for now we only want 1 result, later 7 for a week, or 30 for a month -> number=1
         url: `https://api.spoonacular.com/recipes/search?apiKey=${key}&number=1&query=${searched.value}`,
