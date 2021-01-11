@@ -1,3 +1,6 @@
+// local key
+key = config.API_KEY
+
 // input
 const searched = document.getElementById("search").value
 
@@ -18,11 +21,7 @@ function getSource(id, key) {
 
 // onclick
 function getRec() {
-    // secret values config
-    let key = "undefined"
-    if (config) {
-        key = config.API_KEY
-    } else {
+    if (typeof key === 'undefined') {
         const heroku = require('aws-sdk')
         key = process.env.API_KEY
     }
