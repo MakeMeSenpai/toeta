@@ -23,8 +23,8 @@ function getSource(id) {
     $.ajax({
         url: `https://api.spoonacular.com/recipes/${id}/information?apiKey=${key}`,
         success: (res) => {
-            srcLink.innerHTML = "Recipe"
-            srcLink.href = res.results[0].sourceUrl
+            srcLink.innerHTML = res.sourceUrl
+            srcLink.href = res.sourceUrl
         }
     });
 }

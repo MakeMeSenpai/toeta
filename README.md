@@ -1,4 +1,4 @@
-# Toeta V.1.5.0 Alpha
+# Toeta V.2.2.3 Alpha
 For all the chefs new and old who are finding it hard to decide what to eat for dinner today, Toeta is the solution for you. Giving you daily recipes that you can cook!
 
 ## Index:
