@@ -20,7 +20,7 @@ ___
 - Creating firm ideas
     - [x] Complete Research on recipes APIs
     - [x] Create 5-7 Wire-frame for website design
-    - [] make it live
+    - [x] make it live
     - [x] ~~**IF NO API** create a database filled with recipes using SQL~~ 
 - Most valuable parts
     - [] Collect and return a recipe from the API/DB
