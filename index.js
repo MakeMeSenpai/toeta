@@ -14,9 +14,8 @@ function getSource(id, key) {
 // onclick
 function getRec() {
     // grabbing key
-    var env = $("#myPhpValue").val();
-    console.log(env)
-    let key = env
+    var env = document.getElementById("myPhpValue")
+    let key = env.value
     if (key === "undefined") {
         key = config.API_KEY
         console.log("config")
