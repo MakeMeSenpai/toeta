@@ -36,7 +36,7 @@
         //     console.log(window.localStorage.getItem(`senpai-output${i}`))
         // }
         divOut.innerHTML = window.localStorage.getItem("senpai-output0");
-        srcLink.innerHTML = window.localStorage.getItem("senpai-link0");
+        srcLink.innerHTML = "Start Cookin!";
         srcLink.href = window.localStorage.getItem("senpai-link0");
     /* else load new data, and cache it */
     } else {
@@ -47,7 +47,7 @@
             $.ajax({
                 url: `https://api.spoonacular.com/recipes/${id}/information?apiKey=${key}`,
                 success: (res) => {
-                    srcLink.innerHTML = res.sourceUrl
+                    srcLink.innerHTML = "Start Cookin!"
                     srcLink.href = res.sourceUrl
                     window.localStorage.setItem(`senpai-link${0}`, srcLink)
                 }
@@ -60,9 +60,9 @@
         $.ajax({
             url: `https://api.spoonacular.com/recipes/search?apiKey=${key}&number=1&query=${searched[0]}`,
             success: (res) => {
-                divOut.innerHTML = `<h2>${res.results[0].title}</h2> <br> <img src='${res.baseUri}${res.results[0].image}'> <br><p> Ready in ${res.results[0].readyInMinutes} min.`;
+                divOut.innerHTML = `<h2>${res.results[0].title}</h2> <br> <img class="center" src='${res.baseUri}${res.results[0].image}'> <br><p> Ready in ${res.results[0].readyInMinutes} min.</p>`;
                 getSource(res.results[0].id);    
-                window.localStorage.setItem(`senpai-output${0}`, `<h2>${res.results[0].title}</h2> <br> <img src='${res.baseUri}${res.results[0].image}'> <br><p> Ready in ${res.results[0].readyInMinutes} min.`)
+                window.localStorage.setItem(`senpai-output${0}`, `<h2>${res.results[0].title}</h2> <br> <img class="center" src='${res.baseUri}${res.results[0].image}'> <br><p> Ready in ${res.results[0].readyInMinutes} min.</p>`)
             }
         });
         // }

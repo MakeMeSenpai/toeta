@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- broken -->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,23 @@
     <link rel="icon" href="./public/icon.png">
     <title>Toeta</title>
 </head>
+
 <body>
     <img src="./public/default.png" alt="Toeta Logo">
-    <h1>Sign Up!</h1>
-    <form>
-        <input id="email" type="email">
-        <input id="password" type="password">
-        <input id="validator" type="password">
-        <a href="https://toeta.herokuapp.com/pan.html">
-            <button type="submit" onclick="isValid()">Sign Up!</button>
-        </a>
-    </form>
-    <p>Already Have an Account?</p><a href="">Sign In</a>
+    <div>
+        <h1>Sign Up!</h1>
+        <form>
+            <input id="email" placeholder="Email Address" type="email">
+            <input id="password" placeholder="Password" type="password">
+            <input id="validator" placeholder="Re-enter Password" type="password">
+            <a href="https://toeta.herokuapp.com/pan.html">
+                <button type="submit" onclick="isValid()">Sign Up!</button>
+            </a>
+        </form>
+        <p>Already Have an Account? <a href="">Sign In</a></p>
+    </div>
     <script src="config.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>

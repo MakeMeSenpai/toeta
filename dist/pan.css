@@ -1,3 +1,4 @@
+/* Header */
 html {
   overflow-x: hidden;
 }
@@ -38,4 +39,21 @@ navbar {
 #pfp {
   height: inherit;
   width: inherit;
+}
+
+/* Main */
+main {
+  width: 50%;
+  justify-content: center;
+}
+
+.center {
+  margin: auto;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  right: 15px;
+  bottom: 0px;
 }
