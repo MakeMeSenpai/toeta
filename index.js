@@ -16,7 +16,8 @@ function getRec() {
     // grabbing key
     var env = document.getElementById("myPhpValue")
     let key = env.value
-    if (key === "undefined") {
+    console.log(env.value)
+    if (typeof key === "undefined" || key === null) {
         key = config.API_KEY
         console.log("config")
     }
