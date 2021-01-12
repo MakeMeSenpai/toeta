@@ -14,16 +14,8 @@ function getSource(id, key) {
 // onclick
 function getRec() {
     // grabbing key
-    var env = document.getElementById("myPhpValue")
-    let key = "undefined"
-    if (typeof env === "undefined") {
-        key = config.API_KEY
-        console.log("config")
-    } else {
-        key = env.value
-        console.log('env')
-    }
-    console.log(key)
+    const env = document.getElementById("key")
+    const key = env.value
 
     // input
     const searched = document.getElementById("search")
