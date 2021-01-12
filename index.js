@@ -3,15 +3,13 @@
     let someDate = null
     if (window.localStorage.getItem("senpai-time")) {
         someDate = window.localStorage.getItem("senpai-time")
-        console.log(`Old:${someDate}`)
     } else {
         window.localStorage.setItem("senpai-time", new Date())
         someDate = window.localStorage.getItem("senpai-time")
-        console.log(`New:${someDate}`) 
     }
     const env = document.getElementById("key")
     const key = env.value
-    const searched = food[0]
+    const searched = food // our list of food pulled from words.js
     const srcLink = document.getElementById("source-link")
     const divOut = document.getElementById("output")
 
@@ -33,11 +31,13 @@
 
     /* if same day, and not users first time load saved data */
     // we check if cached output has a value, else meaning the dates are the same simply because it's their first time on the website
-    if (isToday(someDate) == true && window.localStorage.getItem("senpai-output") && window.localStorage.getItem("senpai-output") != "undefined") {
-        console.log(window.localStorage.getItem("senpai-output"))
-        divOut.innerHTML = window.localStorage.getItem("senpai-output");
-        srcLink.innerHTML = window.localStorage.getItem("senpai-link");
-        srcLink.href = window.localStorage.getItem("senpai-link");
+    if (isToday(someDate) == true && window.localStorage.getItem("senpai-output0")) {
+        // for (let i = 0; i < 7; i++) {
+        //     console.log(window.localStorage.getItem(`senpai-output${i}`))
+        // }
+        divOut.innerHTML = window.localStorage.getItem("senpai-output0");
+        srcLink.innerHTML = window.localStorage.getItem("senpai-link0");
+        srcLink.href = window.localStorage.getItem("senpai-link0");
     /* else load new data, and cache it */
     } else {
         window.localStorage.setItem("senpai-time", new Date())
@@ -49,20 +49,22 @@
                 success: (res) => {
                     srcLink.innerHTML = res.sourceUrl
                     srcLink.href = res.sourceUrl
+                    window.localStorage.setItem(`senpai-link${0}`, srcLink)
                 }
             });
-            window.localStorage.setItem("senpai-link", srcLink.value)
         }
 
         /* getRec */
+        // for food in list, return a search result
+        // for (let i = 0; i < 7; i++) {
         $.ajax({
-            // for now we only want 1 result, later 7 for a week, or 30 for a month -> number=1
-            url: `https://api.spoonacular.com/recipes/search?apiKey=${key}&number=1&query=${searched}`,
+            url: `https://api.spoonacular.com/recipes/search?apiKey=${key}&number=1&query=${searched[0]}`,
             success: (res) => {
                 divOut.innerHTML = `<h2>${res.results[0].title}</h2> <br> <img src='${res.baseUri}${res.results[0].image}'> <br><p> Ready in ${res.results[0].readyInMinutes} min.`;
-                getSource(res.results[0].id);
+                getSource(res.results[0].id);    
+                window.localStorage.setItem(`senpai-output${0}`, `<h2>${res.results[0].title}</h2> <br> <img src='${res.baseUri}${res.results[0].image}'> <br><p> Ready in ${res.results[0].readyInMinutes} min.`)
             }
         });
-        window.localStorage.setItem("senpai-output", divOut.value)
+        // }
     }
 })();

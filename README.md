@@ -1,4 +1,4 @@
-# Toeta V.3.0.1 Alpha
+# Toeta V.3.1.1 Alpha
 For all the chefs new and old who are finding it hard to decide what to eat for dinner today, Toeta is the solution for you. Giving you daily recipes that you can cook!
 
 ## Index:
@@ -24,7 +24,7 @@ ___
     - [x] ~~**IF NO API** create a database filled with recipes using SQL~~ 
 - Most valuable parts
     - [x] Collect and return a recipe from the API/DB
-    - [√] Make the returned recipe random per day. *~Very close!*
+    - [x] Make the returned recipe random per day.
     - [] create a way to see upcoming recipes for tests
     - [] Let users Favorite recipes, these meals should show up again in the near future. otherwise should keep random recipes
     - [] Let users Delete recipes, these meals should never show up again in the future.
