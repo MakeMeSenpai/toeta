@@ -15,19 +15,15 @@ function getSource(id, key) {
 function getRec() {
     // grabbing key
     var env = $("#myPhpValue").val();
-    let key = 'undefined'
-    if (config.API_KEY) {
+    let key = env
+    if (key === "undefined") {
         key = config.API_KEY
         console.log("config")
-    } else {
-        key = env
-        console.log("env")
     }
     console.log(key)
 
     // input
     const searched = document.getElementById("search")
-    console.log(searched.value)
 
     // output
     const divOut = document.getElementById("output")
