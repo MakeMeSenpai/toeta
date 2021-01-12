@@ -1,4 +1,4 @@
-# Toeta V.3.2.1 Alpha
+# Toeta V.3.5.1 Alpha
 For all the chefs new and old who are finding it hard to decide what to eat for dinner today, Toeta is the solution for you. Giving you daily recipes that you can cook!
 
 ## Index:
@@ -29,7 +29,7 @@ ___
     - [] Let users Favorite recipes, these meals should show up again in the near future. otherwise should keep random recipes
     - [] Let users Delete recipes, these meals should never show up again in the future.
     - [] Let users Save for later, the recipe should update to be tomorrows meal if the user wants to go out to eat today instead. Other meals should be pushed to the next days as well, and we can remove the last meal of the query.
-    - [] Design the heck out of it with pretty colors and such
+    - [√] Design the heck out of it with pretty colors and such *In the Works*
     - [] **Stretch** Let users see all their planned recipes for that week so that they can shop beforehand, while also highlighting the day they are on.
     - [] **Stretch** Deleted recipes can be re-added to the queue 
     - [] **Stretch** Favored recipes should be seen in a list

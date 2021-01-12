@@ -1,5 +1,41 @@
-body {
-    font-family: Mshtakan;
-    color: white;
-    background-color: #f2a900;
-  }
+html {
+  overflow-x: hidden;
+}
+
+header {
+  height: 125px;
+  width: 105%;
+  margin-top: -12px;
+  margin-left: -10px;
+  background-color: #f2a900;
+}
+
+navbar {
+  width: 240px;
+  display: flex;
+  justify-content: space-between;
+  transform: translate(1200px, -124px);
+}
+
+.nav-sized {
+  height: 112px;
+  width: 112px;
+}
+
+#logo {
+  height: inherit;
+  width: auto;
+}
+
+#circle {
+  border-style: solid;
+  border-radius: 50%;
+  border-width: 3px;
+  border-color: red;
+  overflow: hidden;
+}
+
+#pfp {
+  height: inherit;
+  width: inherit;
+}
