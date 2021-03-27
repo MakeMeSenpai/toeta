@@ -1,4 +1,4 @@
-# Toeta V.3.5.1 Alpha
+# Toeta V.3.5.9 Alpha
 For all the chefs new and old who are finding it hard to decide what to eat for dinner today, Toeta is the solution for you. Giving you daily recipes that you can cook!
 
 ## Index:
@@ -41,6 +41,7 @@ ___
     - [] render results based on allergies (Soy, Shellfish, Nuts, etc.)
     - [] render results based on Calorie intake (I'm on a 2,000 Calorie diet)
     - [] **Stretch** render results based on preference (I don't like eating meat that often, but I do like a lot of cheese)
+    - [] **Stretch** create nutrition plan for consumers to only eat meals that matches or hardly damages this plan. (this can be overruled) https://docs.google.com/presentation/d/1B-ndEUghpgaYZpdyKxJW3hag4hCzp99vHSih75eqzzw/edit#slide=id.g25a3edb0c6_0_111 
 - Personalization
     - [] Login and Authentication
     - [] Save info to profiles, rather than browser, so that information isn't cleared with cache.
