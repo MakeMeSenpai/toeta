@@ -3,7 +3,7 @@ For all the chefs new and old who are finding it hard to decide what to eat for 
 
 ## Get a recipe, Now!
 https://toeta.herokuapp.com/
-![snapshot](./static/imgs/snapshot.png)
+![snapshot](./public/snapshot.png)
 
 ## Index:
 1. [Checklist](#checklist)

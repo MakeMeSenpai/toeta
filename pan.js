@@ -61,7 +61,7 @@
             url: `https://api.spoonacular.com/recipes/search?apiKey=${key}&number=1&query=${searched[0]}`,
             success: (res) => {
                 divOut.innerHTML = `<h2>${res.results[0].title}</h2> <br> <img class="center" src='${res.baseUri}${res.results[0].image}'> <br><p> Ready in ${res.results[0].readyInMinutes} min.</p>`;
-                getSource(res.results[0].id);    
+                getSource(res.results[0].id);
                 window.localStorage.setItem(`senpai-output${0}`, `<h2>${res.results[0].title}</h2> <br> <img class="center" src='${res.baseUri}${res.results[0].image}'> <br><p> Ready in ${res.results[0].readyInMinutes} min.</p>`)
             }
         });
