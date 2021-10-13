@@ -29,12 +29,12 @@ ___
 - Most valuable parts
     - [x] Collect and return a recipe from the API/DB
     - [x] Make the returned recipe random per day.
-    - [] create a way to see upcoming recipes for tests
+    - [x] create a way to see upcoming recipes for tests
     - [] Let users Favorite recipes, these meals should show up again in the near future. otherwise should keep random recipes
     - [] Let users Delete recipes, these meals should never show up again in the future.
     - [] Let users Save for later, the recipe should update to be tomorrows meal if the user wants to go out to eat today instead. Other meals should be pushed to the next days as well, and we can remove the last meal off the query.
     - [√] Design the heck out of it with pretty colors and such *In the Works*
-    - [] **Stretch** Let users see all their planned recipes for that week so that they can shop beforehand, while also highlighting the day they are on.
+    - [x] **Stretch** Let users see all their planned recipes for that week so that they can shop beforehand, while also highlighting the day they are on.
     - [] **Stretch** Deleted recipes can be re-added to the queue 
     - [] **Stretch** Favored recipes should be seen in a list
     - [] **Stretch** Add a skip button to skip a meal.
@@ -47,7 +47,7 @@ ___
     - [] **Stretch** render results based on preference (I don't like eating meat that often, but I do like a lot of cheese)
     - [] **Stretch** create nutrition plan for consumers to only eat meals that matches or hardly damages this plan. (this can be overruled) https://docs.google.com/presentation/d/1B-ndEUghpgaYZpdyKxJW3hag4hCzp99vHSih75eqzzw/edit#slide=id.g25a3edb0c6_0_111 
 - Personalization
-    - [] Login and Authentication
+    - [√] Login and Authentication *needs work*
     - [] Save info to profiles, rather than browser, so that information isn't cleared with cache.
     - [] Let users create their own meals that they can share with the world! Grandma's home made cookies here we come.
     - [] **Stretch** Let premium users decorate their website. drag and drop with stickers, and template backgrounds
@@ -55,7 +55,7 @@ ___
     - [] An expiration timer, to let you know when your leftovers will spoil. Maybe have a gage sorta like a health bar that lets you know when it will be stale or when to throw it out.
 
 ### Previous Updates:
-{Last Update: 01/08/21}
+{Last Update: 10/12/21}
 - There's nothing here (...yet)!
 
 ___
