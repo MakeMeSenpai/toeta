@@ -75,9 +75,10 @@ words = [
 
 food = []
 
-// for (let i = 0; i < food.length; i++) {
-//     food.push(words[Math.floor(Math.random() * words.length)]);
-// }
+for (let i = 0; i < 7; i++) {
+    food.push(words[Math.floor(Math.random() * words.length)]);
+}
 
+console.log(food)
 words.sort()
 console.log(words)

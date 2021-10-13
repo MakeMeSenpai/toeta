@@ -1,32 +1,89 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="dist/pan.css">
-    <link rel="icon" href="./public/icon.png">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO & Link Preview -->
     <title>Toeta</title>
+    <link rel="icon" href="./public/icon.png">
+    <meta property="og:title" name="twitter:title" itemprop="name" content="Document" />
+    <meta property="og:site_name" content="Document" />
+    <meta name="google-site-verification" content="search.google.com/search-console" />
+    <meta name="fb:app_id" content="1321416788276143" />
+    <meta property="og:image" name="twitter:image:scr" itemprop="image" content="https://image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image:alt" name="twitter:image:alt" content="snapshot" />
+    <meta property="og:type" content="Website" />
+    <meta property="keywords" content="Key, search, terms" />
+    <meta property="og:description" name="twitter:description" content="SEO Keywords & text" />
+    <meta property='og:url' content='expected.url' />
+    <meta name="author" content="Anthony S Protho">
+    <!-- Preload Static/Styles -->
+    <link href="./normalize.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="dist/pan.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header>
         <img id="logo" class="nav-sized" src="./public/default.png">
         <navbar>
-            <a href=""><img class="nav-sized" src="./public/folder.png"></a>
-            <a href="https://toeta.herokuapp.com/main.html">
+            <!-- saves file -->
+            <!-- <a href=""><img class="nav-sized" src="./public/folder.png"></a> -->
+            <!-- <a href="https://toeta.herokuapp.com/main.html"> -->
+            <a href="profile.html">
                 <div id="circle" class="nav-sized"><img id="pfp" src="./public/pfp.jpg"></div>
             </a>
         </navbar>
     </header>
 
-    <main class="center">
-        <div id="output"></div>
-        <a href="" id="source-link"></a>
+    <h1 style="position: relative; display: block; margin: auto; font-size: 32px;">Now Serving (Type, i.e. Breakfast): All</h1>
+
+    <main>
+        <div id="0" class="card">
+            <h2>2 days ago</h2>
+            <div id="output0"></div>
+            <a href="" id="source-link0">Start Cookin'</a>
+        </div>
+        <div id="c1" class="card">
+            <h2>day before</h2>
+            <div id="output1"></div>
+            <a href="" id="source-link1">Start Cookin'</a>
+        </div>
+        <div id="c2" class="card">
+            <h2>Yesterday</h2>
+            <div id="output2"></div>
+            <a href="" id="source-link2">Start Cookin'</a>
+        </div>
+        <div id="c3" class="card">
+            <h2>Today</h2>
+            <div id="output3"></div>
+            <a href="" id="source-link3">Start Cookin'</a>
+        </div>
+        <div id="c4" class="card">
+            <h2>Tomorrow</h2>
+            <div id="output4"></div>
+            <a href="" id="source-link4">Start Cookin'</a>
+        </div>
+        <div id="c5" class="card">
+            <h2>Next Day</h2>
+            <div id="output5"></div>
+            <a href="" id="source-link5">Start Cookin'</a>
+        </div>
+        <div id="c6" class="card">
+            <h2>Day After</h2>
+            <div id="output6"></div>
+            <a href="" id="source-link6">Start Cookin'</a>
+        </div>
     </main>
 
-    <footer>©copyright 2021 Anthony S. Protho, ®Toeta™ V.3.5.9 Alpha</footer>
+    <footer>
+        <p>©copyright 2021 Anthony S. Protho, ®Toeta™ Alpha</p>
+    </footer>
     <input type="hidden" id="key" value="5330ba51d1974d599563ac97ca27acf0" />
     <script src="words.js"></script>
     <script src="pan.js"></script>

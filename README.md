@@ -32,7 +32,7 @@ ___
     - [] create a way to see upcoming recipes for tests
     - [] Let users Favorite recipes, these meals should show up again in the near future. otherwise should keep random recipes
     - [] Let users Delete recipes, these meals should never show up again in the future.
-    - [] Let users Save for later, the recipe should update to be tomorrows meal if the user wants to go out to eat today instead. Other meals should be pushed to the next days as well, and we can remove the last meal of the query.
+    - [] Let users Save for later, the recipe should update to be tomorrows meal if the user wants to go out to eat today instead. Other meals should be pushed to the next days as well, and we can remove the last meal off the query.
     - [√] Design the heck out of it with pretty colors and such *In the Works*
     - [] **Stretch** Let users see all their planned recipes for that week so that they can shop beforehand, while also highlighting the day they are on.
     - [] **Stretch** Deleted recipes can be re-added to the queue 

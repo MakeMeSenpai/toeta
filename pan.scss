@@ -31,7 +31,7 @@ navbar {
     width: auto;
 }
 
-#circle { 
+#circle {
     border-style: solid;
     border-radius: 50%;
     border-width: 3px;
@@ -46,12 +46,50 @@ navbar {
 
 /* Main */
 main {
-    width: 50%;
-    justify-content: center;
+    width: 75%;
+    margin: auto;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.center {
-    margin: auto;
+.card {
+    position: relative;
+    margin-left: -125px;
+    width: 21vw;
+    padding: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 12%;
+    background-color: aliceblue;
+}
+
+#c4 {
+    z-index: -1;
+}
+
+#c5 {
+    z-index: -2;
+}
+
+#c6 {
+    z-index: -3;
+}
+
+h2 {
+    text-align: right;
+    text-decoration: underline dotted;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.img-size {
+    transform: scale(0.95);
+    width: 18vw;
+    max-width: 21vw;
 }
 
 /* Footer */
