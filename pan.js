@@ -39,15 +39,45 @@
         }
         console.log(`isToday? ${isToday(someDate)}`)
 
+        // used to await api data
+        function setData() {
+            divOut0.innerHTML = window.localStorage.getItem(`senpai-output0`);
+            srcLink0.innerHTML = "Start Cookin!";
+            srcLink0.href = window.localStorage.getItem(`senpai-link0`);
+            divOut1.innerHTML = window.localStorage.getItem(`senpai-output1`);
+            srcLink1.innerHTML = "Start Cookin!";
+            srcLink1.href = window.localStorage.getItem(`senpai-link1`);
+            divOut2.innerHTML = window.localStorage.getItem(`senpai-output2`);
+            srcLink2.innerHTML = "Start Cookin!";
+            srcLink2.href = window.localStorage.getItem(`senpai-link2`);
+            divOut3.innerHTML = window.localStorage.getItem(`senpai-output3`);
+            srcLink3.innerHTML = "Start Cookin!";
+            srcLink3.href = window.localStorage.getItem(`senpai-link3`);
+            divOut4.innerHTML = window.localStorage.getItem(`senpai-output4`);
+            srcLink4.innerHTML = "Start Cookin!";
+            srcLink4.href = window.localStorage.getItem(`senpai-link4`);
+            divOut5.innerHTML = window.localStorage.getItem(`senpai-output5`);
+            srcLink5.innerHTML = "Start Cookin!";
+            srcLink5.href = window.localStorage.getItem(`senpai-link5`);
+            divOut6.innerHTML = window.localStorage.getItem(`senpai-output6`);
+            srcLink6.innerHTML = "Start Cookin!";
+            srcLink6.href = window.localStorage.getItem(`senpai-link6`);
+        }
+
         /* if same day, and not users first time load saved data */
         // we check if cached output has a value, else meaning the dates are the same simply because it's their first time on the website
         // we will generate results if it's a new day.
         if (isToday(someDate) == true && window.localStorage.getItem("senpai-output0")) {
             console.log("Load Stored Data")
+            setData()
         } else {
             console.log("Generate Data")
+            // TODO: ADD IF STATEMENT FOR FIRST TIME USERS AND
+            // USERS WHO ARE COMING BACK THE NEXT DAY. RIGHT NOW 
+            // ONLY WORKS FOR FIRST TIME.
             window.localStorage.setItem("senpai-time", new Date())
-
+            // TODO: CHANGE TO WHILE, TO CATCH NULL RESPONSES AND GIVE 
+            // 7 VALID RESPONSES TO USER
             for (let i = 0; i < 7; i++) {
                 /* getSource */
                 function getSource(id) {
@@ -70,18 +100,16 @@
                         getSource(res.results[0].id);
                         window.localStorage.setItem(`senpai-output${i}`, `<h3>${res.results[0].title}</h3> <br> <img class="img-size" src='${res.baseUri}${res.results[0].image}'> <br><p> Ready in ${res.results[0].readyInMinutes} min.</p>`)
                     },
-                    error: function (XMLHttpRequest, textStatus, errorThrown) {
-                        alert("Status: " + textStatus);
-                        alert("Error: " + errorThrown);
+                    error: function (res, textStatus) {
                         divOut0.style.display = "none";
                         srcLink0.style.display = "none";
                         divOut1.style.display = "none";
                         srcLink1.style.display = "none";
-                        divOut2.style.display = "none";
+                        divOut2.innerHTML = "Status: " + textStatus + "\n (Please include in report)";
                         srcLink2.style.display = "none";
                         divOut3.innerHTML = "Oh no! Something went wrong! Refresh the page or try again tomorrow. If this problem continues feel free to report at AnthonySeanProtho@gmail.com with subject line 'Toeta Support'";
                         srcLink3.style.display = "none";
-                        divOut4.style.display = "none";
+                        divOut4.innerHTML = "Error: " + res.status + "\n (Please include in report)";
                         srcLink4.style.display = "none";
                         divOut5.style.display = "none";
                         srcLink5.style.display = "none";
@@ -90,29 +118,11 @@
                     }
                 });
             }
+            // then we display all newly stored results
+            setTimeout(() => {
+                setData()
+            }, 450);
         }
-        // then we display all stored/ newly stored results
-        divOut0.innerHTML = window.localStorage.getItem(`senpai-output0`);
-        srcLink0.innerHTML = "Start Cookin!";
-        srcLink0.href = window.localStorage.getItem(`senpai-link0`);
-        divOut1.innerHTML = window.localStorage.getItem(`senpai-output1`);
-        srcLink1.innerHTML = "Start Cookin!";
-        srcLink1.href = window.localStorage.getItem(`senpai-link1`);
-        divOut2.innerHTML = window.localStorage.getItem(`senpai-output2`);
-        srcLink2.innerHTML = "Start Cookin!";
-        srcLink2.href = window.localStorage.getItem(`senpai-link2`);
-        divOut3.innerHTML = window.localStorage.getItem(`senpai-output3`);
-        srcLink3.innerHTML = "Start Cookin!";
-        srcLink3.href = window.localStorage.getItem(`senpai-link3`);
-        divOut4.innerHTML = window.localStorage.getItem(`senpai-output4`);
-        srcLink4.innerHTML = "Start Cookin!";
-        srcLink4.href = window.localStorage.getItem(`senpai-link4`);
-        divOut5.innerHTML = window.localStorage.getItem(`senpai-output5`);
-        srcLink5.innerHTML = "Start Cookin!";
-        srcLink5.href = window.localStorage.getItem(`senpai-link5`);
-        divOut6.innerHTML = window.localStorage.getItem(`senpai-output6`);
-        srcLink6.innerHTML = "Start Cookin!";
-        srcLink6.href = window.localStorage.getItem(`senpai-link6`);
     }
 )();
 
