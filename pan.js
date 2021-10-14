@@ -57,40 +57,41 @@
                             window.localStorage.setItem(`senpai-link${i}`, res.sourceUrl)
                         }
                     });
+                    console.log("Storage Results:", window.localStorage.getItem(`senpai-output${i}`), window.localStorage.getItem(`senpai-link${i}`));
+                    if (typeof window.localStorage.getItem(`senpai-link${i}`) == 'null') {
+                        throw error
+                    }
                 }
 
                 /* getRec */
-                try {
-                    $.ajax({
-                        url: `https://api.spoonacular.com/recipes/search?apiKey=${key}&number=1&query=${food[i]}`,
-                        success: (res) => {
-                            getSource(res.results[0].id);
-                            window.localStorage.setItem(`senpai-output${i}`, `<h3>${res.results[0].title}</h3> <br> <img class="img-size" src='${res.baseUri}${res.results[0].image}'> <br><p> Ready in ${res.results[0].readyInMinutes} min.</p>`)
-                        }, error: function (XMLHttpRequest, textStatus, errorThrown) {
-                            alert("Status: " + textStatus);
-                            alert("Error: " + errorThrown);
-                        }
-                    });
-                } catch (error) {
-                    divOut0.style.display = "none";
-                    srcLink0.style.display = "none";
-                    divOut1.style.display = "none";
-                    srcLink1.style.display = "none";
-                    divOut2.style.display = "none";
-                    srcLink2.style.display = "none";
-                    divOut3.innerHTML = "Oh no! Something went wrong! Refresh the page or try again tomorrow. If this problem continues feel free to report at AnthonySeanProtho@gmail.com with subject line 'Toeta Support'";
-                    srcLink3.style.display = "none";
-                    divOut4.style.display = "none";
-                    srcLink4.style.display = "none";
-                    divOut5.style.display = "none";
-                    srcLink5.style.display = "none";
-                    divOut6.style.display = "none";
-                    srcLink6.style.display = "none";
-                }
+                $.ajax({
+                    url: `https://api.spoonacular.com/recipes/search?apiKey=${key}&number=1&query=${food[i]}`,
+                    success: (res) => {
+                        getSource(res.results[0].id);
+                        window.localStorage.setItem(`senpai-output${i}`, `<h3>${res.results[0].title}</h3> <br> <img class="img-size" src='${res.baseUri}${res.results[0].image}'> <br><p> Ready in ${res.results[0].readyInMinutes} min.</p>`)
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert("Status: " + textStatus);
+                        alert("Error: " + errorThrown);
+                        divOut0.style.display = "none";
+                        srcLink0.style.display = "none";
+                        divOut1.style.display = "none";
+                        srcLink1.style.display = "none";
+                        divOut2.style.display = "none";
+                        srcLink2.style.display = "none";
+                        divOut3.innerHTML = "Oh no! Something went wrong! Refresh the page or try again tomorrow. If this problem continues feel free to report at AnthonySeanProtho@gmail.com with subject line 'Toeta Support'";
+                        srcLink3.style.display = "none";
+                        divOut4.style.display = "none";
+                        srcLink4.style.display = "none";
+                        divOut5.style.display = "none";
+                        srcLink5.style.display = "none";
+                        divOut6.style.display = "none";
+                        srcLink6.style.display = "none";
+                    }
+                });
             }
         }
         // then we display all stored/ newly stored results
-        console.log("Storage", window.localStorage.getItem(`senpai-output0`), window.localStorage.getItem(`senpai-link0`));
         divOut0.innerHTML = window.localStorage.getItem(`senpai-output0`);
         srcLink0.innerHTML = "Start Cookin!";
         srcLink0.href = window.localStorage.getItem(`senpai-link0`);
@@ -114,3 +115,82 @@
         srcLink6.href = window.localStorage.getItem(`senpai-link6`);
     }
 )();
+
+// Day selection
+const one = document.getElementById("c0");
+const two = document.getElementById("c1");
+const three = document.getElementById("c2");
+const four = document.getElementById("c3");
+const five = document.getElementById("c4");
+const six = document.getElementById("c5");
+const seven = document.getElementById("c6");
+
+function c0Click() {
+    one.style.zIndex = "7";
+    two.style.zIndex = "6";
+    three.style.zIndex = "5";
+    four.style.zIndex = "4";
+    five.style.zIndex = "3";
+    six.style.zIndex = "2";
+    seven.style.zIndex = "1";
+};
+
+function c1Click() {
+    one.style.zIndex = "1";
+    two.style.zIndex = "7";
+    three.style.zIndex = "6";
+    four.style.zIndex = "5";
+    five.style.zIndex = "4";
+    six.style.zIndex = "3";
+    seven.style.zIndex = "2";
+};
+
+function c2Click() {
+    one.style.zIndex = "1";
+    two.style.zIndex = "2";
+    three.style.zIndex = "7";
+    four.style.zIndex = "6";
+    five.style.zIndex = "5";
+    six.style.zIndex = "4";
+    seven.style.zIndex = "3";
+};
+
+function c3Click() {
+    one.style.zIndex = "1";
+    two.style.zIndex = "2";
+    three.style.zIndex = "3";
+    four.style.zIndex = "7";
+    five.style.zIndex = "6";
+    six.style.zIndex = "5";
+    seven.style.zIndex = "4";
+};
+
+function c4Click() {
+    one.style.zIndex = "1";
+    two.style.zIndex = "2";
+    three.style.zIndex = "3";
+    four.style.zIndex = "4";
+    five.style.zIndex = "7";
+    six.style.zIndex = "6";
+    seven.style.zIndex = "5";
+};
+
+function c5Click() {
+    one.style.zIndex = "1";
+    two.style.zIndex = "2";
+    three.style.zIndex = "3";
+    four.style.zIndex = "4";
+    five.style.zIndex = "5";
+    six.style.zIndex = "7";
+    seven.style.zIndex = "6";
+};
+
+function c6Click() {
+    one.style.zIndex = "1";
+    two.style.zIndex = "2";
+    three.style.zIndex = "3";
+    four.style.zIndex = "4";
+    five.style.zIndex = "5";
+    six.style.zIndex = "6";
+    seven.style.zIndex = "7";
+};

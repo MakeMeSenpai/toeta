@@ -1,4 +1,4 @@
-# Toeta V.3.9.2 Alpha
+# Toeta V.4.2.0 Alpha
 For all the chefs new and old who are finding it hard to decide what to eat for dinner today, Toeta is the solution for you. Giving you daily recipes that you can cook!
 
 ## Get a recipe, Now!
@@ -51,8 +51,6 @@ ___
     - [] Save info to profiles, rather than browser, so that information isn't cleared with cache.
     - [] Let users create their own meals that they can share with the world! Grandma's home made cookies here we come.
     - [] **Stretch** Let premium users decorate their website. drag and drop with stickers, and template backgrounds
-- The little things
-    - [] An expiration timer, to let you know when your leftovers will spoil. Maybe have a gage sorta like a health bar that lets you know when it will be stale or when to throw it out.
 
 ### Previous Updates:
 {Last Update: 10/12/21}

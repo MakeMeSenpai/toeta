@@ -11,15 +11,15 @@ function isValid() {
         alert("Sorry, this Email is not in use, please sign up")
     } else {
         // TODO: needs to match dbs data, might have to be encoded
-        if (password.value !== "password") {
+        if (password.value !== "Password") {
             alert("Invalid Password")
         } else {
             if (typeof config.local !== "undefined") {
-                console.log("local")
+                console.log("local");
                 window.location = "http://127.0.0.1:5500/pan.html";
             } else {
-                console.log("live")
-                window.location = "https://toeta.herokuapp.com/pan.html"
+                console.log("live");
+                window.location = "https://toeta.herokuapp.com/pan.html";
             }
         }
     }

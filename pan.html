@@ -26,6 +26,7 @@
     <link href="./normalize.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="dist/pan.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="words.js"></script>
 </head>
 
 <body>
@@ -43,37 +44,37 @@
     <h1 style="position: relative; display: block; margin: auto; font-size: 32px;">Now Serving (Type, i.e. Breakfast): All</h1>
 
     <main>
-        <div id="0" class="card">
+        <div id="c0" class="card" onclick="c0Click()">
             <h2>2 days ago</h2>
             <div id="output0"></div>
             <a href="" id="source-link0">Start Cookin'</a>
         </div>
-        <div id="c1" class="card">
+        <div id="c1" class="card" onclick="c1Click()">
             <h2>day before</h2>
             <div id="output1"></div>
             <a href="" id="source-link1">Start Cookin'</a>
         </div>
-        <div id="c2" class="card">
+        <div id="c2" class="card" onclick="c2Click()">
             <h2>Yesterday</h2>
             <div id="output2"></div>
             <a href="" id="source-link2">Start Cookin'</a>
         </div>
-        <div id="c3" class="card">
+        <div id="c3" class="card" onclick="c3Click()">
             <h2>Today</h2>
             <div id="output3"></div>
             <a href="" id="source-link3">Start Cookin'</a>
         </div>
-        <div id="c4" class="card">
+        <div id="c4" class="card" onclick="c4Click()">
             <h2>Tomorrow</h2>
             <div id="output4"></div>
             <a href="" id="source-link4">Start Cookin'</a>
         </div>
-        <div id="c5" class="card">
+        <div id="c5" class="card" onclick="c5Click()">
             <h2>Next Day</h2>
             <div id="output5"></div>
             <a href="" id="source-link5">Start Cookin'</a>
         </div>
-        <div id="c6" class="card">
+        <div id="c6" class="card" onclick="c6Click()">
             <h2>Day After</h2>
             <div id="output6"></div>
             <a href="" id="source-link6">Start Cookin'</a>
@@ -84,7 +85,7 @@
         <p>©copyright 2021 Anthony S. Protho, ®Toeta™ Alpha</p>
     </footer>
     <input type="hidden" id="key" value="5330ba51d1974d599563ac97ca27acf0" />
-    <script src="words.js"></script>
+    <script> src="profile.js"</script>
     <script src="pan.js"></script>
 </body>
 

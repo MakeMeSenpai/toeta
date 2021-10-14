@@ -2,6 +2,6 @@
 <?php
 
 require('vendor/autoload.php');
-include_once("pan.html");
+include_once("main.html");
 
 ?>
