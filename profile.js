@@ -1,3 +1,8 @@
+// first time users get prompt
+// alert("Please fill in the information below before generating recipes");
+
+/* Allergy List */
+//__________________________________________________________________
 [].forEach.call(document.getElementsByClassName('tags-input'), function (el) {
     let hiddenInput = document.createElement('input'),
         mainInput = document.createElement('input'),
@@ -30,7 +35,11 @@
     el.appendChild(mainInput);
     el.appendChild(hiddenInput);
 
-    function addTag (text) {
+    addTag('Dairy');
+    addTag('Soy');
+    addTag('Peanut');
+
+    function addTag(text) {
         let tag = {
             text: text,
             element: document.createElement('span'),
@@ -53,14 +62,14 @@
         refreshTags();
     }
 
-    function removeTag (index) {
+    function removeTag(index) {
         let tag = tags[index];
         tags.splice(index, 1);
         el.removeChild(tag.element);
         refreshTags();
     }
 
-    function refreshTags () {
+    function refreshTags() {
         let tagsList = [];
         tags.forEach(function (t) {
             tagsList.push(t.text);
@@ -68,7 +77,25 @@
         hiddenInput.value = tagsList.join(',');
     }
 
-    function filterTag (tag) {
-        return tag.replace(/[^\w -]/g, '').trim().replace(/\W+/g, '-');
+    function filterTag(tag) {
+        // intolerance list
+        const allergyList = ["Dairy", "Egg", "Gluten", "Grain", "Peanut",
+            "Seafood", "Sesame", "Shellfish", "Soy", "Sulfite", "Tree Nut",
+            "Wheat"
+        ];
+        // already existing tags
+        let tagValues = tags.map(({
+            text
+        }) => text);
+        // if already exist, don't include
+        if (tagValues.includes(tag)) {
+            return ""
+            // if in list include
+        } else if (allergyList.includes(tag)) {
+            return tag.replace(/[^\w -]/g, '').trim().replace(/\W+/g, '-');
+            // not in list, exclude
+        } else {
+            return ""
+        }
     }
 });

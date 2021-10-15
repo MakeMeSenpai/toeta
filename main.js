@@ -14,13 +14,10 @@ function isValid() {
         if (password.value === "" || password.value !== validator.value) {
             alert("Your Passwords do not match!")
         } else {
-            // if (typeof config.local !== "undefined") {
-            //     console.log("local")
-            //     window.location = "http://127.0.0.1:5500/pan.html";
-            // } else {
-            console.log("live")
-            window.location = "https://toeta.herokuapp.com/pan.html"
-            // }
+            console.log("local")
+            window.location = "http://127.0.0.1:5500/profile.html";
+            // console.log("live")
+            // window.location = "https://toeta.herokuapp.com/profile.html"
         }
     }
 }

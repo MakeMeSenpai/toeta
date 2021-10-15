@@ -97,7 +97,10 @@
                 // WILL INCLUDE  DIET, ALLERGIES, based on profile settings
                 // will most likely be a pointer  function or pulled  from
                 // profile.js
-                let concatenate = "type=mainCourse";
+                /*['main course', 'side dish', 'dessert', 'appetizer', 'salad'
+                'bread', 'breakfast', 'soup', 'beverage', 'sauce', 'marinade',
+                'fingerfood', 'snack', 'drink']*/
+                let concatenate = "type=breakfast";
 
                 /* getRec */
                 $.ajax({

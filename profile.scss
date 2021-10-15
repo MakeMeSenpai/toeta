@@ -1,3 +1,18 @@
+#circle {
+    height: 250px;
+    width: 250px;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 3px;
+    border-color: red;
+    overflow: hidden;
+}
+
+#pfp {
+    height: inherit;
+    width: inherit;
+}
+
 .tags-input {
     border: 1px solid #333;
     display: inline-block;
