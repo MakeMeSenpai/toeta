@@ -76,9 +76,8 @@
             // USERS WHO ARE COMING BACK THE NEXT DAY. RIGHT NOW 
             // ONLY WORKS FOR FIRST TIME.
             window.localStorage.setItem("senpai-time", new Date())
-            // TODO: CHANGE TO WHILE, TO CATCH NULL RESPONSES AND GIVE 
-            // 7 VALID RESPONSES TO USER
-            for (let i = 0; i < 7; i++) {
+
+            for (i = 0; i < 7; i++) {
                 /* getSource */
                 function getSource(id) {
                     $.ajax({
@@ -87,18 +86,31 @@
                             window.localStorage.setItem(`senpai-link${i}`, res.sourceUrl)
                         }
                     });
-                    console.log("Storage Results:", window.localStorage.getItem(`senpai-output${i}`), window.localStorage.getItem(`senpai-link${i}`));
                     if (typeof window.localStorage.getItem(`senpai-link${i}`) == 'null') {
+                        console.log("Throw error")
                         throw error
                     }
+                    console.log("Storage Results:", window.localStorage.getItem(`senpai-output${i}`), window.localStorage.getItem(`senpai-link${i}`));
                 }
+
+                // TODO: ADD CONCATENATE STRING TO END OF SEARCH.
+                // WILL INCLUDE  DIET, ALLERGIES, based on profile settings
+                // will most likely be a pointer  function or pulled  from
+                // profile.js
+                let concatenate = "type=mainCourse";
 
                 /* getRec */
                 $.ajax({
-                    url: `https://api.spoonacular.com/recipes/search?apiKey=${key}&number=1&query=${food[i]}`,
+                    // TRYING: to get ride of words.js url: `https://api.spoonacular.com/recipes/search?apiKey=${key}&number=1&query=${food[i]}`,
+                    url: `https://api.spoonacular.com/recipes/random?apiKey=${key}&number=1&${concatenate}`,
                     success: (res) => {
                         getSource(res.results[0].id);
-                        window.localStorage.setItem(`senpai-output${i}`, `<h3>${res.results[0].title}</h3> <br> <img class="img-size" src='${res.baseUri}${res.results[0].image}'> <br><p> Ready in ${res.results[0].readyInMinutes} min.</p>`)
+                        let image = `${res.baseUri}${res.results[0].image}`;
+                        // TRYING: to replace images if there is none
+                        if (!res.results[0].image) {
+                            image = "./public/noimage.png";
+                        }
+                        window.localStorage.setItem(`senpai-output${i}`, `<h3>${res.results[0].title}</h3> <br> <img class="img-size" src='${image}'> <br><p> Ready in ${res.results[0].readyInMinutes} min.</p>`);
                     },
                     error: function (res, textStatus) {
                         divOut0.style.display = "none";

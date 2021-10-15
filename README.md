@@ -44,7 +44,6 @@ ___
     - [] render results based on diets (Vegetarian, Vegan, Halal, etc.)
     - [] render results based on allergies (Soy, Shellfish, Nuts, etc.)
     - [] render results based on Calorie intake (I'm on a 2,000 Calorie diet)
-    - [] **Stretch** render results based on preference (I don't like eating meat that often, but I do like a lot of cheese)
     - [] **Stretch** create nutrition plan for consumers to only eat meals that matches or hardly damages this plan. (this can be overruled) https://docs.google.com/presentation/d/1B-ndEUghpgaYZpdyKxJW3hag4hCzp99vHSih75eqzzw/edit#slide=id.g25a3edb0c6_0_111 
 - Personalization
     - [√] Login and Authentication *needs work*
