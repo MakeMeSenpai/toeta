@@ -32,14 +32,14 @@
     <!-- personalize -->
     <div id="circle" class="nav-sized"><img id="pfp" src="./public/pfp.jpg"></div>
     <label for="name">Username</label>
-    <input name="name" type="text" placeholder="TreeHuger3000">
+    <input id="name" name="name" type="text" placeholder="TreeHuger3000">
     <label for="email">Email</label>
-    <input name="email" type="email" placeholder="AnthonySeanProtho@gmail.com">
+    <input id="email" name="email" type="email" placeholder="AnthonySeanProtho@gmail.com">
 
     <!-- recipe settings -->
     <section>
         <h2>Diet:</h2>
-        <select>
+        <select id="diet-input">
             <option>N/A</option>
             <option>Gluten Free</option>
             <option>Ketogenic</option>
@@ -53,15 +53,15 @@
             <option>Low FODMAP</option>
             <option>Whole30</option>
         </select>
-        <div id="diet out">None applicable diet type.</div>
+        <div id="diet-output"></div>
         <h2>Allergies: </h2>
         <div class="tags-input" data-name="tags-input"></div>
-        <!-- other allergies must be added to excludeIngredients-->
-        <ul>
-            <li>Tomatoes</li>
-            <li>Alcohol</li>
-        </ul>
+        <footer>
+            <p>Ever see a recipe that includes an intolerance? Report it at AnthonySeanProtho@gmail.com with the subject name "Toeta Support". Please include the recipe link, and your excluded ingredients, such as: "I got a Meaty Meatloaf but I'm a vegan", or "I'm allergic to tomatoes, and got a tomato basil salad!"</p>
+        </footer>
     </section>
+
+    <!-- add payment plan. This can just be an optional subscription and we can mention that a percent of profits goes to sharing food to those in need-->
     <footer>
         <p>©copyright 2021 Anthony S. Protho, ®Toeta™ Alpha</p>
     </footer>
