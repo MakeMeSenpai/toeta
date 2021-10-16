@@ -1,8 +1,8 @@
-# Toeta V.4.6.2 Alpha
+# Toeta V.4.6.9 Alpha
 For all the chefs new and old who are finding it hard to decide what to eat for dinner today, Toeta is the solution for you. Giving you daily recipes that you can cook!
 
 ## Get a recipe, Now!
-https://toeta.herokuapp.com/
+https://toeta.herokuapp.com/main.html
 ![snapshot](./public/snapshot.png)
 
 ## Index:
@@ -40,10 +40,10 @@ ___
     - [] **Stretch** Add a skip button to skip a meal.
 ### Potential Features:
 - Filtered results
-    - [] create a survey for new users to see
-    - [] render results based on diets (Vegetarian, Vegan, Halal, etc.)
-    - [] render results based on allergies (Soy, Shellfish, Nuts, etc.)
-    - [] render results based on Calorie intake (I'm on a 2,000 Calorie diet)
+    - ~~[] create a survey for new users to see~~
+    - [x] render results based on diets (Vegetarian, Vegan, Halal, etc.)
+    - [x] render results based on allergies (Soy, Shellfish, Nuts, etc.)
+    - ~~[] render results based on Calorie intake (I'm on a 2,000 Calorie diet)~~
     - [] **Stretch** create nutrition plan for consumers to only eat meals that matches or hardly damages this plan. (this can be overruled) https://docs.google.com/presentation/d/1B-ndEUghpgaYZpdyKxJW3hag4hCzp99vHSih75eqzzw/edit#slide=id.g25a3edb0c6_0_111 
 - Personalization
     - [√] Login and Authentication *needs work*
