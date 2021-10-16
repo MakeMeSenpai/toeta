@@ -1,3 +1,32 @@
+$orange: rgb(242, 169, 0);
+$nav-items: 112px;
+$blue: #a2d9ff;
+
+header {
+    height: 125px;
+    width: 105%;
+    margin-top: -12px;
+    margin-left: -10px;
+    background-color: $orange;
+}
+
+#logo {
+    height: inherit;
+    width: auto;
+}
+
+navbar {
+    font-size: 35px;
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+    transform: translate(1200px, -75px);
+}
+
+main {
+    margin: 2.5%;
+}
+
 #circle {
     height: 250px;
     width: 250px;
@@ -13,9 +42,28 @@
     width: inherit;
 }
 
+form {
+    margin-top: -18%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+input {
+    height: 50px;
+    width: 500px;
+    background-color: aliceblue;
+}
+
+select {
+    height: 50px;
+    width: 500px;
+    background-color: aliceblue;
+}
+
 .tags-input {
     border: 1px solid #333;
     display: inline-block;
+    background-color: aliceblue;
 }
 
 .tags-input .tag {
@@ -79,4 +127,11 @@ input[type=submit] {
 .autocomplete-active {
     background-color: DodgerBlue !important;
     color: #ffffff;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    right: 15px;
+    bottom: 0px;
 }

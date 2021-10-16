@@ -28,42 +28,55 @@
 </head>
 
 <body>
-    <h1>Profile Settings</h1>
-    <!-- personalize -->
-    <div id="circle" class="nav-sized"><img id="pfp" src="./public/pfp.jpg"></div>
-    <label for="name">Username</label>
-    <input id="name" name="name" type="text" placeholder="TreeHuger3000">
-    <label for="email">Email</label>
-    <input id="email" name="email" type="email" placeholder="AnthonySeanProtho@gmail.com">
+    <header>
+        <img id="logo" class="nav-sized" src="./public/default.png" />
+        <navbar>
+            <a href="https://toeta.herokuapp.com/pan.html">Home</a>
+        </navbar>
+    </header>
 
-    <!-- recipe settings -->
-    <section>
-        <h2>Diet:</h2>
-        <select id="diet-input">
-            <option>N/A</option>
-            <option>Gluten Free</option>
-            <option>Ketogenic</option>
-            <option>Vegetarian</option>
-            <option>Lacto-Vegetarian</option>
-            <option>Ovo-Vegetarian</option>
-            <option>Vegan</option>
-            <option>Pescetarian</option>
-            <option>Paleo</option>
-            <option>Primal</option>
-            <option>Low FODMAP</option>
-            <option>Whole30</option>
-        </select>
-        <div id="diet-output"></div>
-        <h2>Allergies: </h2>
-        <div class="tags-input" data-name="tags-input"></div>
-        <footer>
-            <p>Ever see a recipe that includes an intolerance? Report it at AnthonySeanProtho@gmail.com with the subject name "Toeta Support". Please include the recipe link, and your excluded ingredients, such as: "I got a Meaty Meatloaf but I'm a vegan", or "I'm allergic to tomatoes, and got a tomato basil salad!"</p>
-        </footer>
-    </section>
+    <h1 style="position: relative; display: block; margin: auto; margin-left: 15px; font-size: 32px;">Profile Settings
+    </h1>
 
-    <!-- add payment plan. This can just be an optional subscription and we can mention that a percent of profits goes to sharing food to those in need-->
+    <main>
+        <div id="circle" class="nav-sized"><img id="pfp" src="./public/pfp.jpg"></div>
+        <form>
+            <!-- <label for="name">Username</label>
+        <input id="name" name="name" type="text" placeholder="TreeHuger3000"> -->
+            <h2>Email</h2>
+            <input id="email" name="email" type="email" placeholder="AnthonySeanProtho@gmail.com">
+            <h2>Diet:</h2>
+            <select id="diet-input">
+                <option>N/A</option>
+                <option>Gluten Free</option>
+                <option>Ketogenic</option>
+                <option>Vegetarian</option>
+                <option>Lacto-Vegetarian</option>
+                <option>Ovo-Vegetarian</option>
+                <option>Vegan</option>
+                <option>Pescetarian</option>
+                <option>Paleo</option>
+                <option>Primal</option>
+                <option>Low FODMAP</option>
+                <option>Whole30</option>
+            </select>
+            <div id="diet-output"></div>
+            <h2>Allergies: </h2>
+            <div class="tags-input" data-name="tags-input"></div>
+        </form>
+    </main>
+
+    <div>
+        <p>Special thanks to the spoonacular team! This website wouldn't have been possible without them!</p>
+        <p>Ever see a recipe that includes an intolerance? Report it at AnthonySeanProtho@gmail.com with the subject
+            name "Toeta Support". Please include the recipe link, and your excluded ingredients, such as: "I got a
+            Meaty Meatloaf but I'm a vegan", or "I'm allergic to tomatoes, and got a tomato basil salad!"</p>
+        <p>Note that this website uses cookies! Clearing your cache means clearing me!</p>
+    </div>
+
+    <!-- add payment plan. This can just be an optional subscription and we can mention that a percent of profits goes to sharing food to those in need as well as keeping the site free/running-->
     <footer>
-        <p>©copyright 2021 Anthony S. Protho, ®Toeta™ Alpha</p>
+        <p>©2021 Anthony S. Protho, ®Toeta™ Alpha</p>
     </footer>
     <script src="./profile.js"></script>
 </body>

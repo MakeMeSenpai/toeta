@@ -1,4 +1,4 @@
-# Toeta V.4.5.5 Alpha
+# Toeta V.4.6.2 Alpha
 For all the chefs new and old who are finding it hard to decide what to eat for dinner today, Toeta is the solution for you. Giving you daily recipes that you can cook!
 
 ## Get a recipe, Now!
@@ -52,8 +52,16 @@ ___
     - [] **Stretch** Let premium users decorate their website. drag and drop with stickers, and template backgrounds
 
 ### Previous Updates:
-{Last Update: 10/12/21}
-- There's nothing here (...yet)!
+{Last Update: 10/16/21}
+- 4.6.2
+    - Too much! I never kept track of everything that was done before. But we can start with what I do remember (from newest to oldest)
+    - made it a bit more pretty
+    - Profile page skeleton completed with allergin survey
+    - weekly meals generated
+    - basic password and email verification
+    - time tracking enabled so that you ony get one recipe a day
+    - skeleton for the site was made using api spoonacular for  generating  single recipes
+    - logo was created
 
 ___
 ## Info
