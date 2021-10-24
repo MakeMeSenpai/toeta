@@ -113,7 +113,7 @@ console.log(concatenation);
         /* if same day, and not users first time load saved data */
         // we check if cached output has a value, else meaning the dates are the same simply because it's their first time on the website
         // we will generate results if it's a new day.
-        if (isToday(someDate) == true && window.localStorage.getItem("senpai-output0")) {
+        if (isToday(someDate) == true) {
             console.log("Load Stored Data")
             setData()
         } else {
