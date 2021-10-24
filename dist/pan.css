@@ -7,7 +7,7 @@ header {
   height: 125px;
   width: 105%;
   margin-top: -12px;
-  margin-left: -10px;
+  margin-left: -12px;
   background-color: #f2a900;
 }
 
@@ -62,18 +62,6 @@ main {
   background-color: aliceblue;
 }
 
-#c4 {
-  z-index: -1;
-}
-
-#c5 {
-  z-index: -2;
-}
-
-#c6 {
-  z-index: -3;
-}
-
 h2 {
   text-align: right;
   text-decoration: underline dotted;
@@ -93,6 +81,7 @@ h3 {
   margin: 0px;
   margin-top: -25px;
   background-color: #a2d9ff;
+  height: 179px;
 }
 
 /* Footer */

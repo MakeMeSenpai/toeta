@@ -74,8 +74,8 @@ words = [
 ]
 
 food = []
-
-for (let i = 0; i < 7; i++) {
+// was 7, changed to 3 for meal selection
+for (let i = 0; i < 3; i++) {
     food.push(words[Math.floor(Math.random() * words.length)]);
 }
 
