@@ -80,5 +80,5 @@ for (let i = 0; i < 7; i++) {
 }
 
 console.log(food)
-words.sort()
-console.log(words)
+// words.sort()
+// console.log(words)

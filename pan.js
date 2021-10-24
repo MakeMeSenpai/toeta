@@ -6,37 +6,42 @@ const allergyList = ["Dairy", "Egg", "Gluten", "Grain", "Peanut",
 'bread', 'breakfast', 'soup', 'beverage', 'sauce', 'marinade',
 'fingerfood', 'snack', 'drink']*/
 function concatenate() {
+    // would add type to search, but currently not an option
     const type = "&type=" + encodeURIComponent("main course")
     let concatenation =  type + ""
+    // adds diet to search
     const diet = window.localStorage.getItem("senpai-diet")
     if (diet !== null) {
         concatenation += diet
     }
+    // adds intolerance to search
     let intolerance = window.localStorage.getItem("senpai-intolerance")
-    intolerance = intolerance.split(",")
-    let allergies = []
-    let exclude = []
-    for (i=0; i < intolerance.length; i++) {
-        if (allergyList.includes(intolerance[i])) {
-            allergies.push(encodeURIComponent(intolerance[i]))
-        } else if (intolerance[i] != "") {
-            exclude.push(encodeURIComponent(intolerance[i]))
+    if (intolerance !== null) {
+        intolerance = intolerance.split(",")
+        let allergies = []
+        let exclude = []
+        for (i=0; i < intolerance.length; i++) {
+            if (allergyList.includes(intolerance[i])) {
+                allergies.push(encodeURIComponent(intolerance[i]))
+            } else if (intolerance[i] != "") {
+                exclude.push(encodeURIComponent(intolerance[i]))
+            }
         }
+        intolerance = ""
+        if (allergies.length !== 0) {
+            intolerance += "&intolerances=" + allergies.join()
+        }
+        if (exclude.length !== 0) {
+            intolerance += "&excludeIngredients=" + exclude.join()
+        }
+        concatenation += intolerance
     }
-    intolerance = ""
-    if (allergies.length !== 0) {
-        intolerance += "&intolerances=" + allergies.join()
-    }
-    if (exclude.length !== 0) {
-        intolerance += "&excludeIngredients=" + exclude.join()
-    }
-    concatenation += intolerance
     return concatenation
 };
 
 // this excludes ingredients from our search, so that users
 // users never get a recipe that they can't eat!
-const concatenation = concatenate();
+const concatenation = "" // concatenate(); // removed because doesn't work
 console.log(concatenation);
 
 (
@@ -118,34 +123,13 @@ console.log(concatenation);
             // ONLY WORKS FOR FIRST TIME.
             window.localStorage.setItem("senpai-time", new Date())
 
-            /* getSource */
-            function getSource(id) {
-                $.ajax({
-                    url: `https://api.spoonacular.com/recipes/${id}/information?apiKey=${key}`,
-                    success: (res) => {
-                        window.localStorage.setItem(`senpai-link${i}`, res.sourceUrl)
-                    }
-                });
-                if (typeof window.localStorage.getItem(`senpai-link${i}`) == 'null') {
-                    console.log("Throw error")
-                    throw error
-                }
-                console.log("Storage Results:", window.localStorage.getItem(`senpai-output${i}`), window.localStorage.getItem(`senpai-link${i}`));
-            }
-
             for (i = 0; i < 7; i++) {
                 /* getRec */
                 $.ajax({
-                    // TRYING: to get ride of words.js url: `https://api.spoonacular.com/recipes/search?apiKey=${key}&number=1&query=${food[i]}`,
-                    url: `https://api.spoonacular.com/recipes/random?apiKey=${key}&number=1${concatenation}`,
+                    url: `https://api.spoonacular.com/recipes/search?apiKey=${key}${concatenation}&number=1&query=${food[i]}`,
                     success: (res) => {
-                        getSource(res.results[0].id);
-                        let image = `${res.baseUri}${res.results[0].image}`;
-                        // TRYING: to replace images if there is none
-                        if (!res.results[0].image) {
-                            image = "./public/noimage.png";
-                        }
-                        window.localStorage.setItem(`senpai-output${i}`, `<h3>${res.results[0].title}</h3> <br> <img class="img-size" src='${image}'> <br><p> Ready in ${res.results[0].readyInMinutes} min.</p>`);
+                        window.localStorage.setItem(`senpai-output${i}`, `<h3>${res.results[0].title}</h3> <br> <img class="img-size" src='${res.baseUri}${res.results[0].image}'> <br><p> Ready in ${res.results[0].readyInMinutes} min.</p>`);
+                        window.localStorage.setItem(`senpai-link${i}`, res.results[0].sourceUrl)
                     },
                     error: function (res, textStatus) {
                         divOut0.style.display = "none";
