@@ -2,10 +2,9 @@
 
 words = [
     'acorn squash', 'ahi tuna', 'albacore tuna', 'alfalfa',
-    'almond', 'antelope', 'apple juice', 'apples',
+    'almond', 'apple juice', 'apples',
     'applesauce', 'aroma', 'artichoke', 'arugala',
-    'asian noodles', 'asparagus', 'avacado', 'avocado roll',
-    'babaganoosh', 'bacon', 'bagel',
+    'asian noodles', 'asparagus', 'avacado', 'avocado roll', 'bacon', 'bagel',
     'baked beans', 'barley', 'batter', 'bbq',
     'beans', 'beer', 'biscuit',
     'bison', 'bisque', 'black beans', 'bluefish',
@@ -27,7 +26,7 @@ words = [
     'falafel', 'filet', 'fish', 'flour',
     'foie gras', 'fondu', 'food', 'franks',
     'french dip', 'french toast', 'garlic', 'ginger',
-    'glaze', 'gnocchi', 'goose', 'graham crackers',
+    'glaze', 'goose', 'graham crackers',
     'granola', 'grapes', 'green beans', 'grill', 'grits', 'guancamole', 'gumbo',
     'haiku roll', 'halibut', 'ham', 'hamburger',
     'hash browns', 'honey', 'hot dogs', 'huenos rancheros',
@@ -44,17 +43,14 @@ words = [
     'nut', 'oil', 'olive', 'omelette',
     'ostrich', 'pan', 'pancakes', 'pasta',
     'paste', 'pastry', 'pepperoni', 'pie',
-    'pizza', 'pizza', 'plate', 'porter',
-    'pot', 'poutine', 'pudding', 'quail',
+    'pizza', 'pizza', 'plate', 'porter', 'poutine', 'pudding', 'quail',
     'quesadilla', 'quiche', 'raclette', 'recipe',
     'reuben', 'rice', 'salad', 'salsa',
     'sandwich', 'sauce', 'seasoning', 'skillet',
     'soda', 'soup', 'soy', 'spaghetti',
     'spice', 'spinach', 'steak', 'stew',
     'swordfish', 'syrup', 'tartar', 'taste',
-    'tater tots', 'tea', 'toast', 'ube',
-    'udder',
-    'udi’s Bread', 'udo', 'udon Noodles',
+    'tater tots', 'tea', 'toast', 'ube', 'udo', 'udon Noodles',
     'ugali', 'ugli fruit', 'uglies Biscuits',
     'ukrainian Rolls', 'umbrella fruit', 'umeboshi plums',
     'undio', 'unleavened bread', 'unsweetened chocolates',
@@ -63,8 +59,7 @@ words = [
     'walnuts', 'water', 'wheat',
     'wine', 'wok', 'x-cat-ik chillies',
     'xO sauce', 'xacuti', 'xacuti masala',
-    'xalwa a somali', 'xanthareel', 'xavier Soup',
-    'xavier steak', 'xerem de Fiesta', 'xi gua',
+    'xalwa a somali', 'xanthareel', 'xerem de Fiesta', 'xi gua',
     'xia Mi', 'xian hamburger', 'xiang Cai',
     'xiangcaojing', 'xiangchang', 'xiangjiao',
     'xinag jun', 'xinomavro Grapes', 'xom tum',
@@ -76,7 +71,7 @@ words = [
 food = []
 // was 7, changed to 3 for meal selection
 for (let i = 0; i < 3; i++) {
-    food.push(words[Math.floor(Math.random() * words.length)]);
+    food.push(encodeURIComponent(words[Math.floor(Math.random() * words.length)]));
 }
 
 console.log(food)
